@@ -29,3 +29,24 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#filters {
+    margin-bottom: 20px;
+}
+
+#book-table {
+    margin: 0 auto;
+    width: 80%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#book-table thead {
+    background-color: #34495e;
+    color: white;
+}
