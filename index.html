@@ -8,3 +8,29 @@
 </head>
 <body>
     <h1>📚 Book Inventory Manager</h1>
+
+        <form id="book-form">
+        <input type="text" id="title" placeholder="Book Title" required />
+        <input type="text" id="author" placeholder="Author" required />
+        <select id="genre" required>
+            <option value="">Genre</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Non-fiction">Non-fiction</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Sci-fi">Sci-fi</option>
+            <option value="Biogrophy">Biography</option>
+        </select>
+        <button type="submit">Add Book</button>
+    </form>
+
+    <div id="filters">
+        <label for="filter-genre">Filter by Genre:</label>
+        <select id="filter-genre">
+            <option value="All">All</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Non-fiction">Non-fiction</option>
+            <option value="Fantasy">Fantasy</option>
+            <option value="Sci-fi">Sci-fi</option>
+            <option value="Biography">Biography</option>
+        </select>
+    </div>
