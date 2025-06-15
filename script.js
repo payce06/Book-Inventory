@@ -44,3 +44,8 @@ function updateTable() {
               <td>${book.genre}</td>
               <td><button class="delete-btn">Delete</button></td>
             `;
+
+            tableBody.appendChild(row);
+        }
+    });
+}
