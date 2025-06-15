@@ -18,3 +18,29 @@ form.addEventListener('submit', function (e) {
         form.reset();
     }
 });
+
+tableBody.addEventListener('click', function(e) {
+    if(e.target.classList.contains('delete-btn')) {
+        const row = e.target.closest('tr');
+        const index = row.rowIndex - 1;
+        books.splice(index, 1);
+        updateTable();
+    }
+});
+
+genreFilter.addEventListener('change', updateTable);
+
+function updateTable() {
+    const selectedGenre = genreFilter.value;
+    tableBody.innerHTML = '';
+    
+    books.forEach((book, index) => {
+        if (selectedGenre == 'All' || book.genre == selectedGenre) {
+            const row = document.createElement('tr');
+
+            row.innerHTML = `
+              <td>${book.title}</td>
+              <td>${book.author}</td>
+              <td>${book.genre}</td>
+              <td><button class="delete-btn">Delete</button></td>
+            `;
